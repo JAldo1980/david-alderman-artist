@@ -1,0 +1,511 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end of css reset */
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* css variables */
+
+:root {
+  --main-font-colour: #909090;
+}
+
+/* header section styling */
+/* MOBILE FIRST */
+
+.container {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1200px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-el h1 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.logo-el p {
+  color: var(--main-font-colour);
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul a li {
+  color: black;
+  transition: 0.4s;
+}
+
+nav ul a li:hover {
+  color: var(--main-font-colour);
+  transition: 0.4s;
+}
+
+/* hamburger styling */
+
+.hamburger {
+  display: block;
+  background-color: var(--main-font-colour);
+  padding: 0.3em 0.4em;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.bar {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+/* hamburger active */
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE MENU MODAL */
+
+.menu-modal {
+  display: none;
+}
+
+.mobile-nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.mobile-nav .nav-list a {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  list-style: none;
+  text-align: center;
+  background-color: var(--main-font-colour);
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.4s;
+}
+
+.mobile-nav .nav-list a:hover {
+  background-color: lightgray;
+  transition: 0.4s;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* END OF MOBILE MENU MODAL */
+
+.home-banner {
+  margin-top: 0.5em;
+}
+
+.home-banner p {
+  margin-top: 1em;
+  text-align: center;
+  background-color: #c09e72;
+}
+
+.home-banner p a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.home-banner p a:hover {
+  color: ghostwhite;
+}
+
+/* hero section styling */
+
+.hero-section-home {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2em;
+  max-width: 100%;
+}
+
+.hero-image-el {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hero-image {
+  max-width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* align-items: center; */
+}
+
+.hero-cta h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.hero-cta p {
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+  color: var(--main-font-colour);
+}
+
+/* middle section home */
+
+.middle-section-home {
+  margin-top: 2em;
+}
+
+.middle-section-home h2 {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.middle-section-home h3 {
+  margin-top: 1em;
+  font-size: 1.5rem;
+}
+
+.middle-section-home p {
+  margin-top: 0.5em;
+  line-height: 1.8;
+  color: var(--main-font-colour);
+}
+
+/* bottom section styling */
+
+.bottom-section-home {
+  margin-top: 2em;
+}
+
+.bottom-section-home h3 {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.bottom-section-home p {
+  margin-top: 0.5em;
+  color: var(--main-font-colour);
+}
+
+.bottom-section-home img {
+  border-radius: 10px;
+}
+
+.img-text-row img {
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+}
+
+/* bottom section 3 styling */
+
+.bottom-section-3 {
+  margin-top: 2em;
+}
+
+.bottom-section-3 h3 {
+  font-size: 1.5rem;
+}
+
+.bottom-section-3 p {
+  margin-top: 0.5em;
+  color: var(--main-font-colour);
+}
+
+.bottom-section-3 img {
+  margin-top: 0.5em;
+}
+
+/* sort out order of text */
+
+.image-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-text-col .text-box {
+  order: 2;
+}
+
+.image-text-col img {
+  order: 1;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.33);
+}
+
+.footer {
+  margin-top: 2em;
+}
+
+.footer-col {
+  margin-top: 1em;
+}
+
+.footer-col p a {
+  text-decoration: none;
+  color: var(--main-font-colour);
+  transition: 0.4s;
+}
+
+.footer-col p a:hover {
+  text-decoration: none;
+  color: lightgray;
+  transition: 0.4s;
+}
+
+.foot-note {
+  margin-top: 2em;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  color: var(--main-font-colour);
+}
+
+/*  */
+/*  */
+/*  */
+
+.animated-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+/* Create the line using a pseudo-element */
+.animated-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+/* Apply the animation when hovering over the element */
+.animated-line:hover::after {
+  transform: scaleX(1); /* Show the line by scaling it horizontally */
+}
+
+/*  */
+/*  */
+/*  */
+
+/* RESPONSIVE */
+
+/* tablet  */
+
+@media (min-width: 630px) {
+  .hero-section-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-section-home-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .logo-el h1 {
+    font-size: 2rem;
+  }
+
+  .logo-el p {
+    font-size: 1.1rem;
+  }
+
+  .img-text-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .image-text-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  footer p {
+    margin-top: 0.5em;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 912px) {
+  .info-section-home-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .image-text-col {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .bottom-section-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .home-banner p {
+    font-size: 1.3rem;
+  }
+
+  .logo-el h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo-el p {
+    font-size: 1.5rem;
+  }
+}
