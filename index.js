@@ -1,4 +1,5 @@
-// hamburger
+// import { northernArt, northernArtOutput } from "./northern.js";
+// import { sheepArt, sheepArtOutput } from "./sheep.js";
 
 const hamburger = document.querySelector(".hamburger");
 

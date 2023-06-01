@@ -316,7 +316,7 @@ nav ul a li:hover {
 /* bottom section 3 styling */
 
 .bottom-section-3 {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .bottom-section-3 h3 {
@@ -353,7 +353,7 @@ nav ul a li:hover {
 }
 
 .footer {
-  margin-top: 2em;
+  margin-top: 5em;
 }
 
 .footer-col {
@@ -406,6 +406,47 @@ nav ul a li:hover {
 /* Apply the animation when hovering over the element */
 .animated-line:hover::after {
   transform: scaleX(1); /* Show the line by scaling it horizontally */
+}
+/*  */
+/*  */
+/*  */
+
+/* SHEEP // NORTHERN MOBILE STYLING */
+
+.northern-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: stretch;
+  gap: 2em;
+}
+
+/* SHEEP GALLERY STYLING */
+
+.sheep-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: stretch;
+  gap: 2em;
+}
+
+.image-box {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.image-box h2 {
+  font-size: 1rem;
+}
+
+.image-box img {
+  margin-top: 0.5em;
+  width: 100%;
+}
+
+.image-box p {
+  margin-top: 0.5em;
 }
 
 /*  */
@@ -473,6 +514,22 @@ nav ul a li:hover {
   footer p {
     margin-top: 0.5em;
   }
+
+  .northern-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    gap: 2em;
+  }
+
+  /* SHEEP GALLERY STYLING */
+
+  .sheep-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    gap: 2em;
+  }
 }
 
 /* DESKTOP */
@@ -508,4 +565,44 @@ nav ul a li:hover {
   .logo-el p {
     font-size: 1.5rem;
   }
+  /* NORTHERN GALLERY STYLING */
+
+  .northern-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    gap: 2em;
+  }
+
+  /* SHEEP GALLERY STYLING */
+
+  .sheep-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    gap: 2em;
+  }
+
+  .image-box {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .image-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .image-box img {
+    margin-top: 0.5em;
+    max-width: 300px;
+  }
+
+  .image-box p {
+    margin-top: 0.5em;
+  }
 }
+
+/*  */
+/*  */
