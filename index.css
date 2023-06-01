@@ -604,5 +604,21 @@ nav ul a li:hover {
   }
 }
 
-/*  */
-/*  */
+/* EVENTS & NEWS PAGE  */
+
+.news-events-col {
+  margin-top: 2em;
+  display: flex;
+  gap: 2em;
+  padding: 1em;
+}
+
+.events-col {
+  border-right: 1px solid lightgray;
+}
+
+/* contact page */
+
+.contact-container {
+  margin-top: 2em;
+}
